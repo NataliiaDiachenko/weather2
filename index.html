@@ -13,121 +13,68 @@
     rel="stylesheet">
   <script src="https://kit.fontawesome.com/321f1cb627.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="./styles.css" type="text/css" />
+
 
 </head>
 
 <body>
 
   <div class="container">
-    <div class="card-weather">
 
-      <!-- /Form/ -->
-      <form class="form search-form" id="search-form">
-        <div class="form-item">
-          <div class="form-input">
-            <input type="search" placeholder="Enter a city" id="city-input" class="input-search">
+    <div class="weather-app-wrapper">
+      <div class="weather-app">
+
+
+        <form class="search-form" id="search-form">
+          <div class="form-item">
+            <div class="form-input">
+              <input type="search" placeholder="Enter a city" class="form-control" id="city-input" autocomplete="off" />
+            </div>
+            <div class="form-submit">
+              <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
           </div>
-          <div class="form-submit">
-            <input type="submit" value="Search" class="form-control btn-search">
-          </div>
-          <div class="form-button">
-            <button class="btn-current" id="current-location-button">
-              Current
-            </button>
-          </div>
-        </div>
-      </form>
+        </form>
 
-      <!-- /Text/ -->
-      <div class="form-text">
 
-        <div class="form-text-icon">
-          <i class="bi bi-cloud-snow"></i>
-          <!-- <li id="description"></li> -->
-        </div>
-
-        <div class="form-text-city">
+        <div class="overview">
           <h1 id="city"></h1>
-          <ul class="form-city-date">
-            <li id="date"></li>
-            <!-- <li id="description"></li> -->
-          </ul>
-        </div>
-
-        <div class="form-text-temperature">
-          <!-- <h2 id="temperature">
-             <span class="units">
-              <a href="#" id="celsius-link">°C</a>
-              <span style=color:#f96d00>|</span>
-              <a href="#" id="fahrenheit-link"></a>
-            </span> 
-            </h2> -->
-          <div class="col-temperature">
-            <h2 class="temperature" id="temperature"></h2>
-            <sup class="units">
-              <a href="#" id="celsius-link">°C</a>
-              <span style=color:#f96d00>|</span>
-              <a href="#" id="fahrenheit-link">°F</a>
-            </sup>
-          </div>
-
-
-          <!-- <span class="units">°C</span> -->
-          <ul class="form-text-info">
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span> km/h</li>
+          <ul>
+            <li><span id="date"></span></li>
+            <li id="description"></li>
           </ul>
         </div>
 
 
-      </div>
+        <div class="row">
 
-      <!-- /Weather/ -->
-      <div class="form-weather">
-        <div class="next-day">
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Mon</p>
-            <i class="bi bi-moon-stars form-weather-icon"></i>
-            <p class="text-dark-emphasis">12°</p>
+          <div class="col-6">
+            <div class="weather-temperature">
+              <img src="#" alt="Mostly Cloudy" id="icon" />
+              <strong id="temperature"></strong>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a> |
+                <a href="#" id="fahrenheit-link" class="active">°F</a></span>
+            </div>
           </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Tue</p>
-            <i class="bi bi-brightness-high form-weather-icon"></i>
-            <p class="text-dark-emphasis">16°</p>
-          </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Wed</p>
-            <i class="bi bi-cloud-sun form-weather-icon"></i>
-            <p class="text-dark-emphasis">14°</p>
-          </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Thu</p>
-            <i class="bi bi-cloud-snow form-weather-icon"></i>
-            <p class="text-dark-emphasis">12°</p>
-          </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Fri</p>
-            <i class="bi bi-brightness-high form-weather-icon"></i>
-            <p class="text-dark-emphasis">18°</p>
-          </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Sat</p>
-            <i class="bi bi-snow form-weather-icon"></i>
-            <p class="text-dark-emphasis">10°</p>
-          </div>
-          <div class="col-weather">
-            <p class="text-dark-emphasis">Sun</p>
-            <i class="bi bi-brightness-high form-weather-icon"></i>
-            <p class="text-dark-emphasis">19°</p>
+
+          <div class="col-6">
+            <ul>
+              <li>Humidity <span id="humidity"></span>%</li>
+              <li>Wind <span id="wind"></span>km/h</li>
+            </ul>
           </div>
         </div>
       </div>
+
+
+      <small>
+        <a href="https://nataliiadiachenko.github.io/week7/" target="_blank">Open-source code</a>
+        by Nataliia Diachenko
+      </small>
     </div>
-
-  </div>
   </div>
   <script src="./src/index.js"></script>
 </body>
